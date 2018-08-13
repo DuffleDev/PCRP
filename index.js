@@ -1,7 +1,7 @@
 const discord = require('discord.js');
 const bot = new discord.Client();
 
-bot.login('NDc4MzUwNjk3ODQzMTMwMzgx.DlJbNg.gD6HV71yMpX95-P0qPtkn-uQ7S8');
+bot.login('process.env.token');
 
 bot.on('ready', () => {
     bot.user.setActivity('Helping PCRPplayers!')
