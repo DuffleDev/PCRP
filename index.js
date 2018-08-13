@@ -1,35 +1,14 @@
-const discord = require('discord.js');
-const bot = new discord.Client();
+onst Discord = require("discord.js");
+const client = new Discord.Client();
 
-bot.login(process.env.token);
-
-bot.on('ready', () => {
-    bot.user.setActivity('Helping PCRPplayers!')
-  })
-
-bot.on('message', (message) => {
-    if (message.author.bot) return;
-    else if(message.content == 'donate') {
-        message.reply('You can donate at https://pcrp.mistforums.com/donate. The perks of donating are also there.')
-    }
+client.on("ready", () => {
+  console.log("I am ready!");
 });
 
-bot.on('message', (message) => {
-    if (message.author.bot) return;
-    else if(message.content == 'custom car') {
-        message.reply('You can view a list of custom cars for civilians here #🧑civilian-stuff')
-    }
+client.on("message", (message) => {
+  if (message.content.startsWith("ping")) {
+    message.channel.send("pong!");
+  }
 });
 
-bot.on('message', (message) => {
-    if (message.author.bot) return;
-    else if(message.content == 'owner') {
-        message.reply('Please use the chain of command')
-    }
-    else if(message.content == '@Jakob') {
-        message.reply('Please use the chain of command')
-    }
-    else if(message.content == '@Peter') {
-        message.reply('Please use the chain of command')
-    }
-});
+client.login("SuperSecretBotTokenHere");
